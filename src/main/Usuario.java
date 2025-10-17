@@ -125,15 +125,15 @@ public class Usuario {
         }
     }
      public static void main(String[] args) {
-        Usuario newUser = new Usuario("pp", "password123", "usuario");
-        Usuario newUser2 = new Usuario("mria", "password456", "admin");
-        Usuario newUser3 = new Usuario("p1312p", "password123", "usuario");
-        Usuario newUser4 = new Usuario("mr231312ia", "password456", "admin");
+        Usuario newUser = new Usuario("Ale", "password123", "usuario");
+        Usuario newUser2 = new Usuario("Maria", "password456", "profesional médico");
+        Usuario newUser3 = new Usuario("Juan", "password123", "usuario");
+        Usuario newUser4 = new Usuario("Jose", "password456", "admin");
 
         Usuario.registrarNuevoUsuario(newUser);
         Usuario.registrarNuevoUsuario(newUser2);
-        Usuario.registrarNuevoUsuario(newUser4);
         Usuario.registrarNuevoUsuario(newUser3);
+        Usuario.registrarNuevoUsuario(newUser4);
 
         newUser.getId();
 
