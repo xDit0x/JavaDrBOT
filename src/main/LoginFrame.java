@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import java.io.File;
 import java.io.IOException;
+import javax.swing.SwingConstants;
 
 public class LoginFrame extends JFrame implements WindowListener, ActionListener {
 	JPanel mainPanel = new JPanel();
@@ -21,6 +22,8 @@ public class LoginFrame extends JFrame implements WindowListener, ActionListener
 	JTextField txtfPassw = new JTextField();
 	JButton cambioModoClO = new JButton();
 	String rtArchivoCandal = "/Users/peterpunk/eclipse-workspace/drbotProgram1.8/src/main/Fonts/Candal-Regular.ttf";
+	String rtArchivoArmata = "/Users/peterpunk/eclipse-workspace/drbotProgram1.8/src/main/Fonts/Armata-Regular.ttf";
+
 	boolean modoClaro = false;
 
 	String txtUser = "";
@@ -37,6 +40,12 @@ public class LoginFrame extends JFrame implements WindowListener, ActionListener
 		drBotLabel.setBackground(new Color(86, 229, 220));
 		drBotLabel.setForeground(new Color(16, 44, 60));
 		mainPanel.setLayout(null);
+		btnLogin.setToolTipText("Login");
+		btnLogin.setBackground(new Color(241, 236, 225));
+		
+		btnLogin.setFont(new Font("Dialog", Font.BOLD, 12));
+		txtfUser.setHorizontalAlignment(SwingConstants.CENTER);
+		txtfUser.setFont(cargarFuente(rtArchivoArmata,12));
 		
 		JPanel panelHeader = new JPanel();
 		panelHeader.setBackground(new Color(71, 186, 178));
@@ -55,7 +64,9 @@ public class LoginFrame extends JFrame implements WindowListener, ActionListener
 		inicioSesion.setBounds(7, 19, 0, 0);
 		loginPanel.add(inicioSesion);
 				
-				JButton crearCuenta = new JButton("Crea una cuenta nueva.");
+				JButton crearCuenta = new JButton("Crea una cuenta nueva");
+				crearCuenta.setToolTipText("Create a new account");
+				crearCuenta.setBackground(new Color(241, 236, 225));
 				crearCuenta.setForeground(new Color(16, 44, 60));
 				crearCuenta.setFont(cargarFuente(rtArchivoCandal,14));
 				crearCuenta.setBounds(323, 274, 263, 29);
@@ -63,12 +74,14 @@ public class LoginFrame extends JFrame implements WindowListener, ActionListener
 						btnLogin.setForeground(new Color(16, 44, 60));
 						btnLogin.setBounds(393, 202, 128, 29);
 						loginPanel.add(btnLogin);
-						txtfPassw.setBounds(350, 66, 200, 20);
+						txtfPassw.setHorizontalAlignment(SwingConstants.CENTER);
+						txtfPassw.setBounds(350, 142, 200, 20);
 						loginPanel.add(txtfPassw);
 						txtfPassw.setPreferredSize(new Dimension(200,20));
 						txtfPassw.setName("Contraseña");
+						txtfPassw.setFont(cargarFuente(rtArchivoArmata,12));
 						txtfPassw.setToolTipText("Introduzca su contraseña.");
-								txtfUser.setBounds(350, 142, 200, 20);
+								txtfUser.setBounds(350, 69, 200, 20);
 								loginPanel.add(txtfUser);
 						
 								txtfUser.setPreferredSize(new Dimension(200,20));
@@ -79,14 +92,14 @@ public class LoginFrame extends JFrame implements WindowListener, ActionListener
 												
 														JLabel lblUser = new JLabel("Usuario");
 														lblUser.setForeground(new Color(16, 44, 60));
-														lblUser.setBounds(421, 36, 60, 18);
+														lblUser.setBounds(400, 34, 100, 26);
 														loginPanel.add(lblUser);
-														lblUser.setFont(cargarFuente(rtArchivoCandal,14));
+														lblUser.setFont(cargarFuente(rtArchivoCandal,22));
 														
 														JLabel lblPassword = new JLabel("Contraseña");
 														lblPassword.setForeground(new Color(16, 44, 60));
-														lblPassword.setFont(cargarFuente(rtArchivoCandal,14));
-														lblPassword.setBounds(408, 100, 94, 29);
+														lblPassword.setFont(cargarFuente(rtArchivoCandal,22));
+														lblPassword.setBounds(380, 105, 165, 29);
 														loginPanel.add(lblPassword);
 				
 						btnLogin.addActionListener(new ActionListener() {
