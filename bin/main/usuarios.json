@@ -46,5 +46,29 @@
     "usuario": "Jose",
     "password": "password456",
     "permisos": "admin"
+  },
+  {
+    "id": 9,
+    "usuario": "Ale",
+    "password": "password123",
+    "permisos": "usuario"
+  },
+  {
+    "id": 10,
+    "usuario": "Maria",
+    "password": "password456",
+    "permisos": "profesional médico"
+  },
+  {
+    "id": 11,
+    "usuario": "Juan",
+    "password": "password123",
+    "permisos": "usuario"
+  },
+  {
+    "id": 12,
+    "usuario": "Jose",
+    "password": "password456",
+    "permisos": "admin"
   }
 ]

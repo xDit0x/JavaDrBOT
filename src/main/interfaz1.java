@@ -60,7 +60,7 @@ public class interfaz1 extends JFrame {
  
     public interfaz1() {
 
-        // Configuración básica
+        // -- Configuración básica
 
         setTitle("Interfaz 1");
 
@@ -88,7 +88,7 @@ public class interfaz1 extends JFrame {
 
         top.setBackground(new Color(45, 45, 45));
  
-        // Botón menú ☰
+        // -- Botón menú ☰
 
         JButton botonMenu = new JButton("☰");
 
@@ -118,7 +118,7 @@ public class interfaz1 extends JFrame {
 
         barraLateral.setLayout(new BoxLayout(barraLateral, BoxLayout.Y_AXIS));
  
-        // Botones dentro de la barra
+        // -- Botones dentro de la barra
 
         String[] opciones = {"Perfil", "Configuración", "Historial", "Cerrar sesión"};
 
@@ -170,11 +170,11 @@ public class interfaz1 extends JFrame {
 
         centro.setOpaque(false);
  
-        // Pon el título ARRIBA del área central
+        // -- Pon el título ARRIBA del área central
 
         centro.add(titulo, BorderLayout.NORTH);
  
-        // (Opcional) margen superior para ajustarlo más arriba o abajo
+        // -- Margen superior para ajustarlo más arriba o abajo
 
         centro.setBorder(new EmptyBorder(40, 0, 0, 0)); // sube/baja ajustando el 40
  
